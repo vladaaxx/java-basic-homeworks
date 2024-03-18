@@ -1,6 +1,6 @@
 package ru.ogai.java.basic.homeworks.hw11;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected int runSpeed;
     protected int swimSpeed;
@@ -30,22 +30,7 @@ public class Animal {
         return 0;
     }
 
-    public double swim(int distance) {
-        if (distance > 0) {
-            double time = (double) distance / runSpeed;
-            stamina -= distance;
-            if (stamina < 0) {
-                System.out.println(name + " устал(а) и не может продолжать плыть");
-                stamina = 0;
-                return 0.0;
-            }
-            System.out.printf("%s проплыла(а) %d метров за %f секунд", name, distance, time);
-            System.out.println();
-            return time;
-        }
-        System.out.println("Расстояние отрицательное");
-        return 0.0;
-    }
+    public abstract double swim(int distance);
 
     public void info() {
         System.out.printf("Имя: %s\nCкорость бега: %d\nСкорость плавания: %d\nВыносливость: %d\n", name, runSpeed, swimSpeed, stamina);
