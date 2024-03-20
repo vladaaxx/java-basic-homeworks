@@ -12,10 +12,13 @@ public class CrossCountry implements Transport {
 
         if (fuel >= 2 * distanse) {
             fuel -= 2 * distanse;
-            System.out.println("вездеход проехал " + distanse + " км");
             return true;
         }
         System.out.println("вездеходу не хватает бензина");
         return false;
+    }
+    @Override
+    public String getTransport() {
+        return "вездеход";
     }
 }

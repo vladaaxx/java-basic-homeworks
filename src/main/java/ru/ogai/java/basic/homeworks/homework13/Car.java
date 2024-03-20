@@ -12,7 +12,6 @@ public class Car implements Transport {
         if (area == TypeOfArea.FLATLAND){
             if (fuel >= distanse){
                 fuel -= distanse;
-                System.out.println("машина проехала " + distanse + " км");
                 return true;
             }
             System.out.println("машине не хватает бензина");
@@ -22,5 +21,9 @@ public class Car implements Transport {
         return false;
     }
 
+    @Override
+    public String getTransport() {
+        return "машина";
+    }
 }
 

@@ -6,12 +6,14 @@ public class Bicycle implements Transport {
         this.energy = person.getEnergy();
     }
 
+    public int getBEnergy() {
+        return energy;
+    }
+
     @Override
-    public boolean move(int distanse, TypeOfArea area) {
+    public boolean move(int distanse, TypeOfArea area)  {
         if (area != TypeOfArea.SWAMP){
             if (energy >= 2*distanse){
-                energy -= 2*distanse;
-                System.out.println("Велосипед проехал " + distanse + " км");
                 return true;
             }
             System.out.println("у человека не хватает сил");
@@ -19,5 +21,9 @@ public class Bicycle implements Transport {
         }
         System.out.println("велосипед не ездит тут");
         return false;
+    }
+    @Override
+    public String getTransport() {
+        return "велосипед";
     }
 }

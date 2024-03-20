@@ -11,7 +11,6 @@ public class Horse implements Transport {
         if (area != TypeOfArea.SWAMP){
             if (force >= distanse){
                 force -= distanse;
-                System.out.println("Лошадь проскакала " + distanse + " км");
                 return true;
             }
             System.out.println("лошади не хватает сил");
@@ -19,5 +18,10 @@ public class Horse implements Transport {
         }
         System.out.println("лошадь не ходит тут");
         return false;
+    }
+
+    @Override
+    public String getTransport() {
+        return "лошадь";
     }
 }
