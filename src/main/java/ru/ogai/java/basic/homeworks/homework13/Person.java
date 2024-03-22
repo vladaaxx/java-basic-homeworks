@@ -42,7 +42,7 @@ public class Person {
     public boolean move(int distanse, TypeOfArea area) {
         if (currentTransport != null) {
             if (currentTransport.move(distanse, area) == true) {
-                if (currentTransport.getTransport() == "велосипед") {
+                if (currentTransport.getTransport().equals ("велосипед")) {
                     energy -= 2 * distanse;
                 }
                 System.out.println("человек едет на " + currentTransport.getTransport() + " " + distanse + " км");

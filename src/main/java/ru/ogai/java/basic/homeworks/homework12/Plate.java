@@ -10,7 +10,7 @@ public class Plate {
     }
 
     public int addFood(int food){
-        if (foodNow < foodMax && (foodNow + food < foodMax)){
+        if (foodNow + food < foodMax){
             foodNow += food;
             System.out.println("теперь в тарелке " + foodNow + " еды");
             return foodNow;

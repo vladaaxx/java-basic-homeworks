@@ -6,10 +6,6 @@ public class Bicycle implements Transport {
         this.energy = person.getEnergy();
     }
 
-    public int getBEnergy() {
-        return energy;
-    }
-
     @Override
     public boolean move(int distanse, TypeOfArea area)  {
         if (area != TypeOfArea.SWAMP){
