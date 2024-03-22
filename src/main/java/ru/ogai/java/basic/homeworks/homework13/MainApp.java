@@ -8,6 +8,9 @@ public class MainApp {
 //        person1.goOn(car1);
         person1.goOn(bicycle1);
         person1.move(2, TypeOfArea.FLATLAND);
+        person1.move(2, TypeOfArea.FLATLAND);
+        person1.move(2, TypeOfArea.FLATLAND);
+        person1.move(2, TypeOfArea.FLATLAND);
         System.out.println(person1.getEnergy());
 
 //        person1.goOn(car1);
